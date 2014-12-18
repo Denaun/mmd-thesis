@@ -1,0 +1,41 @@
+%
+%   Generic Configuration for thesis documents
+%
+
+% \usepackage{layouts}[2001/04/29]
+
+
+% In case we need a glossary, or index
+\usepackage[]{glossaries}
+
+\glstoctrue%
+\makeglossaries%
+\makeindex%
+
+% Basic page layout configuration
+\def\mychapterstyle{default}
+\def\mypagestyle{headings}
+
+\input{template/mmd-thesis-layout}
+
+\input{template/mmd-thesis-packages}
+
+\input{template/mmd-default-metadata}
+
+\graphicspath{{images/}}
+
+% Some mathematical operators
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\eye}{\mathbb{1}}
+\DeclareMathOperator{\nimplies}{\centernot\implies}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\suchthat}{\enspace{} s.t. \enspace{}}
+\newcommand{\mean}[1]{\overline{#1}}
+\newcommand{\set}[1]{\mathbb{#1}}
+\newcommand{\transp}[1]{{#1}^\top}
+\newcommand{\ortho}[1]{{#1}^\perp}
+\newcommand{\vect}[1]{\boldsymbol{#1}}

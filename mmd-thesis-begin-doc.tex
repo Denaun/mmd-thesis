@@ -1,0 +1,80 @@
+%
+%	Get ready for the actual document
+%
+
+\usepackage[\languages]{babel}
+\usepackage[
+  plainpages=false,
+  pdfpagelabels,
+  pdftitle={\mytitle},
+  pagebackref,
+  pdfauthor={\myauthor},
+  pdfkeywords={\keywords}
+]{hyperref}
+\usepackage{memhfixc}
+
+
+\input{template/mmd-title}
+\title{\mytitle}
+\author{\myauthor}
+
+\ifx\mydate\undefined
+\else
+\date{\mydate}
+\fi
+
+
+\ifx\theme\undefined
+\else
+\usetheme{\theme}
+\fi
+
+\VerbatimFootnotes
+
+
+\chapterstyle{\mychapterstyle}
+\pagestyle{\mypagestyle}
+
+\begin{document}
+
+% Frontmatter
+\frontmatter
+\thispagestyle{empty}
+
+\noindent \begin{center}
+  \textsc{\huge \university} \\
+  \vspace{1.0cm}
+  \textsc{\LARGE \faculty} \\
+  {\large \course} \\
+  \vspace{1.0cm}
+  \includegraphics[height=5cm]{images/logo} \\
+  \vspace{0.5cm}
+  {\Large Tesi di Laurea} \\
+  \textbf{\huge \formattedtitle}
+\end{center}
+
+\vfill
+\noindent \textbf{\Large Relatore:}
+
+\noindent {\Large \enskip\supervisor}{\Large \hfill}\textbf{\Large Laureando:}
+
+\noindent \textbf{\Large Correlatore:}{\Large \hfill}{\Large \myauthor\enskip}
+
+\noindent {\Large \enskip\assistantsupervisor}{\Large \hfill}{\Large mat.
+\registrationnumber\enskip}
+
+\vfill
+
+\noindent \begin{center}
+  {\Large Anno Accademico \academicyear}
+\end{center}
+
+\clearpage
+
+\setcounter{tocdepth}{\tocdepth}
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+\mainmatter

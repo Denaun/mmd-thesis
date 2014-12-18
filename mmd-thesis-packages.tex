@@ -1,0 +1,53 @@
+%
+%   Default packages for thesis documents created by MultiMarkdown
+%
+
+\usepackage{microtype}              % Typography optimization on micro-level
+\usepackage{fancyvrb}			    % Allow \verbatim et al. in footnotes
+\usepackage{amsfonts}
+\usepackage{amsmath}
+% \usepackage[nosectionbib]{apacite}
+\usepackage{siunitx}
+
+\usepackage{booktabs}               % Better tables
+\usepackage{tabulary}               % Support longer table cells
+\usepackage{multirow}
+\usepackage[bb=pazo]{mathalfa}      % Better support for blackboard bold font etc
+\usepackage{centernot}
+\usepackage{fnpos}                  % \makeFNbelow by default
+
+% \usepackage[parfill]{parskip}       % Use line breaks instead of indentation
+
+\usepackage[sort&compress]{natbib}  % Better bibliography support
+
+\usepackage{acronym}
+\usepackage[left=3.5cm, right=2cm, bottom=3.5cm]{geometry}
+\geometry{a4paper}
+
+% \usepackage{helvet}                 % Use Helvetica (for sans-serif)
+% \usepackage{mathpazo}               % Use Palatino (for serif)
+\usepackage{textcomp}               % Euro-Symbol
+\usepackage{appendix}
+
+\usepackage[T1]{fontenc}		    % Use T1 font encoding for accented characters
+\usepackage[utf8x]{inputenc}        % For UTF-8 support
+
+\usepackage{boxedminipage}          % Surround parts of graphics with box
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}             % Use sub-figures
+
+\usepackage{xcolor}				    % Allow for color (annotations)
+\usepackage{listings}			    % Allow for source code highlighting
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+
+\ifpdf%
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+% Packages that include graphicx
+\usepackage{todonotes}              % Use TODO notes
+\usepackage{xfrac}
