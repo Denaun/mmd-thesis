@@ -1,6 +1,7 @@
 %
 %	Get ready for the actual document
 %
+% TODO Add translations (at least in English)
 
 \usepackage[\languages]{babel}
 \usepackage[
@@ -58,10 +59,20 @@
 
 \noindent {\Large \enskip\supervisor}{\Large \hfill}\textbf{\Large Laureando:}
 
-\noindent \textbf{\Large Correlatore:}{\Large \hfill}{\Large \myauthor\enskip}
+\noindent \textbf{\Large 
+  \ifdefined\secondassistantsupervisor
+    Correlatori:
+  \else
+    Correlatore:
+  \fi
+}{\Large \hfill}{\Large \myauthor\enskip}
 
 \noindent {\Large \enskip\assistantsupervisor}{\Large \hfill}{\Large mat.
 \registrationnumber\enskip}
+
+\ifdefined\secondassistantsupervisor
+  \noindent {\Large \enskip\secondassistantsupervisor}
+\fi
 
 \vfill
 
@@ -74,7 +85,7 @@
 \setcounter{tocdepth}{\tocdepth}
 \tableofcontents
 \listoffigures
-\listoftables
+% \listoftables
 
 
 \mainmatter
